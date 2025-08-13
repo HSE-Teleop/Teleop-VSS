@@ -12,11 +12,11 @@ Vehicle.Teleop.EnginePower:
     type: actuator
     datatype: float
     unit: percent
-    min: -1
-    max: 1
-    description: Percentual power of the engine. 
-                <0 = Engine works against its current speed, 
-                0 = Neutral state of the engine, 
+    min: -1000
+    max: 1000
+    description: Percentual power of the engine.
+                <0 = Engine works against its current speed,
+                0 = Neutral state of the engine,
                 >0 = Engine runs with a percentage of its power.
 
 Vehicle.Teleop.SteeringAngle:
@@ -32,7 +32,18 @@ Vehicle.Teleop.Gear:
     datatype: int8
     min: -1
     max: 1
-    description: The current gear. 
-                -1 = Reverse, 
-                0 = Neutral, 
+    description: The current gear.
+                -1 = Reverse,
+                0 = Neutral,
                 1 = Forward.
+
+Vehicle.Teleop.ControlCounter:
+  type: actuator
+  datatype: uint8
+  description: Counter
+
+Vehicle.Teleop.ControlTimestampMs:
+  type: actuator
+  datatype: uint32
+  unit: ms
+  description: Timestamp in ms

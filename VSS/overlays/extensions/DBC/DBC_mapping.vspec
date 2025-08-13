@@ -10,13 +10,21 @@ Vehicle.Teleop.SteeringAngle:
   datatype: int16
   vss2dbc:
     signal: SteeringCmd
-    transform:
-      math: "x + 128"
 
 Vehicle.Teleop.EnginePower:
   type: actuator
   datatype: float
   vss2dbc:
     signal: AccelerationCmd
-    transform:
-      math: "(x + 1) * 127.5"
+
+Vehicle.Teleop.ControlCounter:
+  type: actuator
+  datatype: uint8
+  vss2dbc:
+    signal: ControlCounter
+
+Vehicle.Teleop.ControlTimestampMs:
+  type: actuator
+  datatype: uint32
+  vss2dbc:
+    signal: ControlTimestamp_ms
