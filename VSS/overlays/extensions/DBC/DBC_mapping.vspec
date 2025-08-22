@@ -2,8 +2,10 @@ Vehicle.Speed:
     type: sensor
     datatype: float
     dbc2vss:
-        signal: VelocityFb
-        interval_ms: 10
+      signal: VelocityFb
+      interval_ms: 10
+      transform:
+        math: max(-1,min(1,(x-90)/15))
 
 Vehicle.Teleop.SteeringAngle:
   type: actuator
@@ -16,6 +18,8 @@ Vehicle.Teleop.EnginePower:
   datatype: float
   vss2dbc:
     signal: AccelerationCmd
+    transform:
+      math: round((x*15)+90)
 
 Vehicle.Teleop.ControlCounter:
   type: actuator
