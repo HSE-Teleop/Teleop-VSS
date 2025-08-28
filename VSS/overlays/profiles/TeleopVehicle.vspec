@@ -40,6 +40,15 @@ Vehicle.Chassis.RearCamera:
     datatype: boolean
     description: Check if the rearcamera exists.
 
+Vehicle.Chassis.Axle:
+    type: branch
+    description: Axle
+
+Vehicle.Chassis.Axle.SteeringAngle:
+    type: sensor
+    datatype: int16
+    description: The steering angle of the axle
+
 
 # Telemetry data
 

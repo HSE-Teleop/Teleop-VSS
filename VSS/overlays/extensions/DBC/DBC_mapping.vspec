@@ -7,6 +7,12 @@ Vehicle.Speed:
       transform:
         math: max(-1,min(1,(x-90)/15))
 
+Vehicle.Chassis.Axle.SteeringAngle:
+    type: sensor
+    datatype: float
+    dbc2vss:
+        signal: SteeringFb
+
 Vehicle.Teleop.SteeringAngle:
   type: actuator
   datatype: int16

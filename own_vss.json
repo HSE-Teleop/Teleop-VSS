@@ -3,6 +3,20 @@
     "children": {
       "Chassis": {
         "children": {
+          "Axle": {
+            "children": {
+              "SteeringAngle": {
+                "datatype": "float",
+                "dbc2vss": {
+                  "signal": "SteeringFb"
+                },
+                "description": "The steering angle of the axle",
+                "type": "sensor"
+              }
+            },
+            "description": "Axle",
+            "type": "branch"
+          },
           "FrontCamera": {
             "datatype": "boolean",
             "description": "Check if the frontcamera exists.",
