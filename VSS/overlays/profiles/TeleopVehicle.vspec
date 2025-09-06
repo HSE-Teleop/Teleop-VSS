@@ -27,6 +27,8 @@ Vehicle.Identification.VIN:
     description: 17-character Vehicle Identification Number (VIN) as defined by ISO 3779.
     pattern: ^([0-9A-HJ-NPR-Z]{3})([0-9A-HJ-NPR-Z]{6})([0-9A-HJ-NPR-Z]{4}[0-9]{4})$
 
+# Telemetry data
+
 Vehicle.Chassis:
     type: branch
 
@@ -48,9 +50,6 @@ Vehicle.Chassis.Axle.SteeringAngle:
     type: sensor
     datatype: int16
     description: The steering angle of the axle
-
-
-# Telemetry data
 
 Vehicle.Speed:
     type: sensor
